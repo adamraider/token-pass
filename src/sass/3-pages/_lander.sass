@@ -30,34 +30,45 @@ $content-width: 680px
   .how-token-modules
     font-size: 22px
     .title
-      text-align: center
+      text-align: left
       margin-bottom: 40px
+      +tablet
+        text-align: center
     .module
       width: 100%
+      margin-bottom: 40px
+      +outer-container
+      +tablet
+        margin-bottom: 20px
       .heading
+        +tablet
+          +span-columns(3)
         text-transform: uppercase
         font-size: 14px
         color: $gray-light
-        width: 25%
-        float: left
       .node
-        width: 8%
-        float: left
+        display: none
+        +tablet
+          +span-columns(1)
+          display: block
       .description
-        width: 67%
-        float: left
+        +tablet
+          +span-columns(8)
+    
 .feature-area
   +content_area
   .feature-heading
     +heading
   .features
+    +outer-container
     .feature
       float: left
       font-weight: 200
-      max-width: 33%
+      width: 100%
       box-sizing: border-box
       &:not(:last-of-type)
-        padding-right: 80px
+        padding-right: 0
+        margin-bottom: 40px
       .icon
         i.material-icons
           font-size: 64px
@@ -67,7 +78,11 @@ $content-width: 680px
       .subtext
         font-size: 16px
         line-height: 1.5
-
+      +tablet
+        +span-columns(4)
+        &:not(:last-of-type)
+          padding-right: 50px
+          margin-bottom: 0
 .why-area
   +content_area
   background-color: $gray-lightest

@@ -11,3 +11,21 @@ $white:                     #FAFAFA
 $brand-primary:             #4A90E2
 $brand-green:               #B8E986
 $brand-red:                 #FF5757
+
+$gutter-px: 40px
+
+$mobile: 480px
+$tablet: 768px
+$desktop: 1024px
+
+@mixin mobile
+  @media (min-width: #{$mobile})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$tablet})
+    @content
+
+@mixin desktop
+  @media (min-width: #{$desktop})
+    @content

@@ -1,5 +1,4 @@
 $height: 80px
-$gutter: $height
 .landing-nav
   top: 0px
   z-index: 1000
@@ -9,15 +8,29 @@ $gutter: $height
   line-height: $height
   color: $white
   background-color: $black
-  transition: all 0.2s ease
+  transition: all 0.5s ease
+  .landing-nav-container
+    margin: 0 $gutter-px
   &.pristine
     top: 20px
     background-color: transparent !important
-  .landing-nav-container
-    margin: 0 $gutter
+    .landing-nav-container
+      +tablet
+        margin: 0 $height
+
+  .landing-nav-menu-btn
+    float: right
+    display: block
+    i
+      vertical-align: middle
+    +tablet
+      display: none
   .landing-nav-menu
     float: right
     margin-top: 14px
+    display: none
+    +tablet
+      display: block
     .btn-register
       +btn_static
       color: $white
