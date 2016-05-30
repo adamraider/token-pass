@@ -4,12 +4,13 @@ var gulp = require('gulp'),
     pug = require('gulp-pug'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     plumber = require('gulp-plumber'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
     watch = require('gulp-watch');
+
+gulp.task('default', ['views', 'styles', 'scripts', 'serve']);
 
 var errorHandler = function (error) {
   console.log(error.message);
@@ -26,7 +27,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('views', function() {
-  return gulp.src('./src/views/**/*.pug')
+  return gulp.src('./src/views/**/index.pug')
     .pipe(plumber())
     .pipe(pug({ pretty: true }).on('error', util.log))
     .pipe(gulp.dest('./app/'))
@@ -53,5 +54,4 @@ gulp.task('serve', function() {
   watch('./src/sass/**/*.sass', function(){ gulp.start('styles'); })
   watch('./src/views/**/*.pug', function(){ gulp.start('views'); })
   watch('./src/javascripts/**/*.js', function(){ gulp.start('scripts'); })
-  watch('./src/img/**/*', function(){ gulp.start('compress_images'); })
 });

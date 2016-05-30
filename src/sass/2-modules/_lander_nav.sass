@@ -1,0 +1,30 @@
+$height: 80px
+$gutter: $height
+.landing-nav
+  top: 20px
+  z-index: 1000
+  position: fixed
+  width: 100%
+  height: $height
+  line-height: $height
+  color: $white
+  background-color: transparent
+  .landing-nav-container
+    margin: 0 $gutter
+  .landing-nav-menu
+    float: right
+  .btn-register
+    +btn_static
+    color: $white
+    vertical-align: middle
+    float: left
+  .btn-login
+    +btn_border_white
+    vertical-align: middle
+    float: left
+  .logo
+    color: $white
+    margin: 0 !important
+    font-size: 32px
+    font-weight: 200
+    vertical-align: middle

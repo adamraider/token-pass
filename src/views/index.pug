@@ -3,9 +3,15 @@ html(lang="en")
   head
     include partials/_head
   body
-    h1 Token Pass
-    p 
-      span Get started in 
-      code src/views/index.pug.
-
+    .landing-nav
+      .landing-nav-container
+        span.logo token<strong>pass</strong>
+        .landing-nav-menu
+          button.btn-register Register
+          button.btn-login Login
+    .hero
+      .hero-flex-content
+        h1.hero-heading Digital access tokens in your bitcoin wallet.
+        button.btn-cta Get Started
+      .hero-bg(style="background-image: url(../images/hero-bg.png)")
     script(src="/js/app.js")
