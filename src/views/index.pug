@@ -2,8 +2,10 @@ doctype html
 html(lang="en")
   head
     include partials/_head
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet")
   body
-    .landing-nav
+    .landing-nav.pristine
       .landing-nav-container
         span.logo token<strong>pass</strong>
         .landing-nav-menu
@@ -14,4 +16,62 @@ html(lang="en")
         h1.hero-heading Digital access tokens in your bitcoin wallet.
         button.btn-cta Get Started
       .hero-bg(style="background-image: url(../images/hero-bg.png)")
-    script(src="/js/app.js")
+    .mission-area
+      .content-wrapper
+        .mission-heading Tokens give you special features and privileges based on the contents of your bitcoin wallet.
+    .how-area
+      .content-wrapper
+        .how-heading How It Works
+        .how-content
+          .how-token-modules
+            .title Tokens can be represented in two ways…
+            .module
+              .heading
+                span Redeemables
+              .node
+                span >
+              .description
+                span …as something redeemable - think ‘digital gift certificate
+            .module
+              .heading
+                span Access Tokens
+              .node
+                span >
+              .description
+                span …or as an Access Token that gives holders entry to features, services or accounts they wouldn’t have access to otherwise.
+    .feature-area
+      .feature-heading Features
+      .features
+        .feature
+          .icon: i.material-icons visibility
+          .title Privacy Control
+          .subtext Control which wallet addresses are visible to the world.
+        .feature
+          .icon: i.material-icons radio_button_on
+          .title Inventory Management
+          .subtext Browse and search your collection of access tokens. 
+        .feature
+          .icon: i.material-icons lock_outline
+          .title Secure Access
+          .subtext Authentication using TCA is secure with cryptocurrency tech.
+
+    .why-area
+      .content-wrapper
+        .why-heading Why Use Tokens?
+        .why-content
+          p
+            strong > Want to give supports from your pre-sale access to exclusive updates to your project?
+            br
+            span Create a token that controls access to a private blog and distribute to anyone who holds you pre-sale token.
+          p
+            strong > Are you an artist who wants to give early access to your followers?
+            br
+            span Just create a token and give your followers instructions on how to retrieve it. 
+          p
+            span Token Controlled Access allows for limitless possibilities when engaging with your audience. Create acess tokens for games, business, or anything that provides value to someone. 
+    .footer
+      .footer-content
+        span &copy; Tokenly
+
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+    script(src="/javascripts/application.js")
