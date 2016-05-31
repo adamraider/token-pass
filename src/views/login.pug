@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet")
+  body.login
+    .everything
+      .logo token<strong>pass</strong>
+      .form-wrapper
+        form
+          input(type="text" placeholder="email")
+          input(type="password" placeholder="password")
+          button.login-btn Login
+      .register-subtext 
+        span.
+          Don't have an account? <a href="#">Register</a>
+      .or-divider-module
+        .divider div
+        span.or or
+        .divider div
+      a.signin-with-btc-btn Sign In With Bitcoin
+    script(src="./javascripts/jquery-2.2.4.min.js")
+    script(src="./javascripts/application.js")

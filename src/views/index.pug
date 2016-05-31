@@ -6,15 +6,17 @@ html(lang="en")
       rel="stylesheet")
   body
     #mobile-nav.landing-nav-menu-mobile
+      .landing-nav-menu-header
+        i.material-icons.toggle-mobile-nav close
       ul
         li: a(href="#") Register
-        li: a(href="#") Login
+        li: a(href="login.html") Login
     .landing-nav.pristine
       .landing-nav-container
         span.logo token<strong>pass</strong>
         .landing-nav-menu
-          button.btn-register Register
-          button.btn-login Login
+          a.btn-register Register
+          a.btn-login(href="login.html") Login
         .landing-nav-menu-btn
           i.material-icons.toggle-mobile-nav dehaze
     .hero

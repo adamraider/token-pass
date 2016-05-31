@@ -27,7 +27,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('views', function() {
-  return gulp.src('./src/views/**/index.pug')
+  return gulp.src('./src/views/**/*.pug')
     .pipe(plumber())
     .pipe(pug({ pretty: true }).on('error', util.log))
     .pipe(gulp.dest('./app/'))

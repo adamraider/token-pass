@@ -34,16 +34,17 @@ $height: 80px
     display: none
     +tablet
       display: block
-    .btn-register
+    .btn-login, .btn-register
+      display: block
+      float: left
+      vertical-align: middle
+      line-height: 1
+    .btn-register 
       +btn_static
       color: $white
-      vertical-align: middle
-      float: left
       margin-top: 2px
     .btn-login
       +btn_border_white
-      vertical-align: middle
-      float: left
 
   .logo
     color: $white
@@ -64,19 +65,28 @@ $mobile-nav-width: 200px
   padding: 0
   display: block
   overflow-y: scroll
+  color: $white
   background-color: $gray-dark
   box-shadow: 2px 0 5px $black
   transition: all 0.2s ease
   // Default hidden and off the window
   opacity: 0
   left: -1 * $mobile-nav-width
-
   // Active, visible and in the frame
   &.active
     opacity: 1
     left: 0
   +tablet
     display: none
+  .landing-nav-menu-header
+    overflow: hidden
+    .title, .material-icons
+      vertical-align: middle
+    .material-icons
+      cursor: pointer
+      float: right
+      display: block
+      padding: 20px 28px 0 28px
   ul
     margin: 0
     padding: 0
