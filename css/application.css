@@ -427,7 +427,20 @@ body.login {
     font-size: 42px;
     text-align: center;
     margin-bottom: 40px; }
-  body.login form input {
+  body.login form label {
+    background-color: #9B9B9B;
+    color: #FAFAFA;
+    border-radius: 4px;
+    position: relative;
+    top: 1px;
+    left: 15px;
+    padding: 3px 5px;
+    font-size: 10px;
+    text-transform: uppercase; }
+  body.login form input:disabled {
+    background-color: #9B9B9B;
+    color: #FAFAFA; }
+  body.login form input, body.login form textarea {
     width: 100%;
     background-color: transparent;
     border: 1px solid #C4C4C4;
