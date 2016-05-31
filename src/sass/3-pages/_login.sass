@@ -12,7 +12,20 @@ body.login
     text-align: center
     margin-bottom: 40px
   form
-    input
+    label
+      background-color: $gray-light
+      color: $white
+      border-radius: 4px
+      position: relative
+      top: 1px
+      left: 15px
+      padding: 3px 5px
+      font-size: 10px
+      text-transform: uppercase
+    input:disabled
+      background-color: $gray-light
+      color: $white
+    input, textarea
       width: 100%
       background-color: transparent
       border: 1px solid $gray-lighter

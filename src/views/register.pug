@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet")
+  body.login
+    .everything
+      .logo token<strong>pass</strong>
+      .form-wrapper
+        form
+          input(type="text" placeholder="name")
+          input(type="email" placeholder="email")
+          input(type="password" placeholder="password")
+          button.login-btn Register
+      .register-subtext 
+        span.
+          Already have an account? <a href="login.html">Login</a>
+    
+    include partials/_javascripts

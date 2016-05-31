@@ -9,13 +9,13 @@ html(lang="en")
       .landing-nav-menu-header
         i.material-icons.toggle-mobile-nav close
       ul
-        li: a(href="#") Register
+        li: a(href="register.html") Register
         li: a(href="login.html") Login
     .landing-nav.pristine
       .landing-nav-container
         span.logo token<strong>pass</strong>
         .landing-nav-menu
-          a.btn-register Register
+          a.btn-register(href="register.html") Register
           a.btn-login(href="login.html") Login
         .landing-nav-menu-btn
           i.material-icons.toggle-mobile-nav dehaze
@@ -81,5 +81,4 @@ html(lang="en")
       .footer-content
         span &copy; Tokenly 2016
 
-    script(src="./javascripts/jquery-2.2.4.min.js")
-    script(src="./javascripts/application.js")
+    include partials/_javascripts

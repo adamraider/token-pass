@@ -9,8 +9,9 @@ html(lang="en")
       .logo token<strong>pass</strong>
       .form-wrapper
         form
-          input(name="email" type="text" placeholder="email")
-          input(name="password" type="password" placeholder="password")
+          label(for="word") Word of the day
+          input(name="word" type="text" value="rabbit" disabled)
+          textarea(name="message" placeholder="message" rows="5")
           button.login-btn Login
       .register-subtext 
         span.
@@ -19,6 +20,6 @@ html(lang="en")
         .divider div
         span.or or
         .divider div
-      a.signin-with-btc-btn(href="login_bitcoin.html") Sign In With Bitcoin
+      a.signin-with-btc-btn Sign In With Email
     
     include partials/_javascripts
