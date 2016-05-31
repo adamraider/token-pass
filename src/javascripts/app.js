@@ -6,3 +6,12 @@ $(document).on('scroll', function (e) {
     $('.landing-nav').addClass('pristine');
   }
 });
+
+$('.toggle-mobile-nav').on('click', function (e) {
+  var $nav = $('#mobile-nav')
+  if ($nav.hasClass('active')) {
+    $nav.removeClass('active');
+  } else {
+    $nav.addClass('active');
+  }
+});

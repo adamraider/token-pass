@@ -5,6 +5,10 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet")
   body
+    #mobile-nav.landing-nav-menu-mobile
+      ul
+        li: a(href="#") Register
+        li: a(href="#") Login
     .landing-nav.pristine
       .landing-nav-container
         span.logo token<strong>pass</strong>
@@ -12,7 +16,7 @@ html(lang="en")
           button.btn-register Register
           button.btn-login Login
         .landing-nav-menu-btn
-          i.material-icons dehaze
+          i.material-icons.toggle-mobile-nav dehaze
     .hero
       .hero-flex-content
         h1.hero-heading Digital access tokens in your bitcoin wallet.
@@ -75,5 +79,5 @@ html(lang="en")
       .footer-content
         span &copy; Tokenly 2016
 
-    script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+    script(src="./javascripts/jquery-2.2.4.min.js")
     script(src="./javascripts/application.js")

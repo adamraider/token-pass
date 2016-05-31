@@ -24,6 +24,7 @@ $height: 80px
     float: right
     display: block
     i
+      cursor: pointer
       vertical-align: middle
     +tablet
       display: none
@@ -43,9 +44,48 @@ $height: 80px
       +btn_border_white
       vertical-align: middle
       float: left
+
   .logo
     color: $white
     margin: 0 !important
     font-size: 32px
     font-weight: 200
     vertical-align: middle
+
+$mobile-nav-width: 200px
+.landing-nav-menu-mobile
+  position: fixed
+  z-index: 2000
+  width: $mobile-nav-width
+  left: 0
+  top: 0
+  height: 100vh
+  margin: 0
+  padding: 0
+  display: block
+  overflow-y: scroll
+  background-color: $gray-dark
+  box-shadow: 2px 0 5px $black
+  transition: all 0.2s ease
+  // Default hidden and off the window
+  opacity: 0
+  left: -1 * $mobile-nav-width
+
+  // Active, visible and in the frame
+  &.active
+    opacity: 1
+    left: 0
+  +tablet
+    display: none
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 0
+      padding: 0
+      a
+        text-transform: uppercase
+        letter-spacing: 1px
+        color: $white
+        padding: 20px 28px
+        display: block
