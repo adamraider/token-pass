@@ -228,6 +228,8 @@ a {
   transition: all 0.2s ease;
   opacity: 0;
   left: -200px; }
+  .landing-nav-menu-mobile::-webkit-scrollbar {
+    display: none; }
   .landing-nav-menu-mobile.active {
     opacity: 1;
     left: 0; }
