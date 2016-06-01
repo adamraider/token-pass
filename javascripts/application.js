@@ -19,7 +19,6 @@ $('.toggle-mobile-nav').on('click', function (e) {
 $('[data-tooltip]').on('click', function (e) {
   var $this = $(this);
   var uniqid = $this.data('tooltipid');
-  console.log(uniqid)
   if (uniqid) {
     $('#' + uniqid).remove();
     $this.data('tooltipid', null)
@@ -30,4 +29,10 @@ $('[data-tooltip]').on('click', function (e) {
     var $tooltip = $.parseHTML('<div id="' + uniqid + '" class="tooltip">' + text + '</div>');
     $this.append($tooltip);
   }
+});
+
+$('.active-toggle-module').on('click', function(e) {
+  var $this = $(this);
+  var currentState = $this.attr('data-toggle') === 'true';
+  $this.attr('data-toggle', !currentState);
 });

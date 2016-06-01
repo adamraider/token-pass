@@ -563,3 +563,198 @@ body.login {
       background-color: #404040;
       color: #FAFAFA;
       border: 2px solid #4A4A4A; }
+
+body.dashboard {
+  background-color: #f7f7f7; }
+  body.dashboard .navigation {
+    background-color: #4A4A4A;
+    color: #FAFAFA;
+    height: 80px;
+    line-height: 80px;
+    overflow: hidden; }
+    body.dashboard .navigation .navigation-content {
+      padding: 0 40px; }
+      body.dashboard .navigation .navigation-content .logo {
+        font-size: 36px;
+        letter-spacing: 1px;
+        font-weight: 200;
+        float: left; }
+      body.dashboard .navigation .navigation-content ul.menu {
+        float: right;
+        margin: 0;
+        padding: 0; }
+        body.dashboard .navigation .navigation-content ul.menu li {
+          list-style-type: none;
+          font-size: 18px;
+          float: left; }
+          body.dashboard .navigation .navigation-content ul.menu li a {
+            text-transform: uppercase;
+            color: #FAFAFA;
+            font-weight: bold;
+            padding: 0 20px;
+            display: block; }
+      body.dashboard .navigation .navigation-content .user {
+        float: right;
+        line-height: 80px;
+        margin-left: 40px; }
+        body.dashboard .navigation .navigation-content .user .avatar {
+          display: inline-block;
+          vertical-align: middle;
+          background-color: #4A90E2;
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          margin-right: 4px; }
+        body.dashboard .navigation .navigation-content .user i.material-icons {
+          vertical-align: middle; }
+  body.dashboard section {
+    display: block;
+    margin-bottom: 40px;
+    padding: 0 40px; }
+    body.dashboard section:first-of-type {
+      margin-top: 40px; }
+    body.dashboard section .heading {
+      font-size: 32px;
+      font-weight: 200;
+      color: #4A4A4A;
+      margin-right: 40px; }
+  body.dashboard .search-wrapper {
+    width: 350px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    overflow: hidden;
+    position: relative; }
+    body.dashboard .search-wrapper input {
+      margin: 0;
+      line-height: 40px;
+      border: none;
+      outline: none;
+      width: 80%;
+      height: 100%;
+      padding: 0 20px;
+      letter-spacing: 1px;
+      background-color: transparent; }
+    body.dashboard .search-wrapper .icon {
+      width: 20%;
+      float: right;
+      text-align: center; }
+      body.dashboard .search-wrapper .icon i {
+        color: #9B9B9B;
+        font-size: 22px;
+        line-height: 40px; }
+  body.dashboard section.title > * {
+    display: inline-block;
+    vertical-align: middle; }
+
+body.inventory section.tokens .token {
+  height: 41px;
+  line-height: 41px;
+  background-color: #fff;
+  border-top: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  overflow: hidden;
+  padding: 0 20px; }
+  body.inventory section.tokens .token:last-of-type {
+    border-bottom: 1px solid #EEEEEE; }
+  body.inventory section.tokens .token .avatar {
+    float: left;
+    margin-top: 7px;
+    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+    background-color: #9B9B9B; }
+  body.inventory section.tokens .token .primary-info {
+    float: left;
+    font-size: 18px;
+    font-weight: 200; }
+    body.inventory section.tokens .token .primary-info .quantity {
+      display: inline-block;
+      margin-right: 10px;
+      width: 50px;
+      text-align: right; }
+  body.inventory section.tokens .token .secondary-info {
+    float: right;
+    font-size: 14px;
+    color: #9B9B9B; }
+    body.inventory section.tokens .token .secondary-info .expiration {
+      margin-right: 20px; }
+
+body.pockets section.pockets .pocket {
+  height: 80px;
+  background-color: #fff;
+  border-top: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  overflow: hidden;
+  padding: 0 20px; }
+  body.pockets section.pockets .pocket:last-of-type {
+    border-bottom: 1px solid #EEEEEE; }
+  body.pockets section.pockets .pocket .primary-info {
+    float: left;
+    font-size: 18px;
+    font-weight: 200;
+    height: 100%; }
+    body.pockets section.pockets .pocket .primary-info .name {
+      display: block;
+      font-size: 18px;
+      font-weight: 200;
+      margin-top: 19px;
+      margin-bottom: 4px; }
+    body.pockets section.pockets .pocket .primary-info .address {
+      display: block;
+      font-size: 14px;
+      font-weight: 200;
+      color: #9B9B9B; }
+  body.pockets section.pockets .pocket .active-toggle-wrapper {
+    padding-top: 20px;
+    padding-right: 20px;
+    height: 100%;
+    float: left;
+    position: relative; }
+  body.pockets section.pockets .pocket .active-toggle-module {
+    position: relative;
+    width: 60px; }
+    body.pockets section.pockets .pocket .active-toggle-module:hover {
+      cursor: pointer; }
+    body.pockets section.pockets .pocket .active-toggle-module .module-switch {
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 36px;
+      border: 1px solid #FAFAFA;
+      transition: all 0.2s ease; }
+    body.pockets section.pockets .pocket .active-toggle-module[data-toggle="true"] .module-switch {
+      left: 0;
+      background-color: #B8E986; }
+    body.pockets section.pockets .pocket .active-toggle-module[data-toggle="false"] .module-switch {
+      left: 24px;
+      background-color: #FF5757; }
+    body.pockets section.pockets .pocket .active-toggle-module .module-background {
+      z-index: 50;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 36px;
+      border-radius: 36px;
+      background-color: #C4C4C4; }
+  body.pockets section.pockets .pocket .settings-btn {
+    float: right;
+    margin-top: 15px;
+    padding: 11px 12px 9px 12px;
+    border-radius: 4px;
+    border: 1px solid #9B9B9B;
+    transition: all 0.1s ease;
+    cursor: pointer; }
+    body.pockets section.pockets .pocket .settings-btn i {
+      color: #9B9B9B; }
+    body.pockets section.pockets .pocket .settings-btn:hover {
+      background-color: #9B9B9B; }
+      body.pockets section.pockets .pocket .settings-btn:hover i {
+        color: #FAFAFA; }
