@@ -11,9 +11,10 @@
     <div class="everything">
       <div class="logo">token<strong>pass</strong></div>
       <div class="form-wrapper">
-        <div class="helptext"></div>
-        <form><span class="tooltip" data-text="Login quickly and securely by signing todays Word of the Day with a previously verified address."><i class="material-icons">help_outline</i></span>
-          <input name="word" type="text" value="rabbit" disabled><span class="tooltip" data-text="Paste your signed Word of the Day into this window, then click login."><i class="material-icons">help_outline</i></span>
+        <form>
+          <div class="tooltip-wrapper" data-tooltip="Login quickly and securely by signing todays Word of the Day with a previously verified address."><i class="help-icon material-icons">help_outline</i></div>
+          <input name="word" type="text" value="rabbit" disabled>
+          <div class="tooltip-wrapper" data-tooltip="Paste your signed Word of the Day into this window, then click login."><i class="help-icon material-icons">help_outline</i></div>
           <textarea name="message" placeholder="cryptographic signature" rows="5"></textarea>
           <button class="login-btn">Login</button>
         </form>
