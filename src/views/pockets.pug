@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+  body.dashboard.pockets
+    include partials/_dashnav
+    section.title
+      span.heading Addresses
+      .search-wrapper
+        input(type="text" placeholder="Search for an address...")
+        .icon
+          i.material-icons search
+    section.pockets
+      .pocket
+        .active-toggle-wrapper
+          .active-toggle-module(data-toggle="true")
+            .module-switch
+            .module-background
+        .primary-info
+          span.name: a(href="#") LTBcoin Compatible Address
+          span.address 1JztwoasonzzoaONGSonazon3902eg
+
+        .settings-btn
+          i.material-icons settings
+      .pocket
+        .active-toggle-wrapper
+          .active-toggle-module(data-toggle="true")
+            .module-switch
+            .module-background
+        .primary-info
+          span.name: a(href="#") LTBcoin Compatible Address
+          span.address 1JztwoasonzzoaONGSonazon3902eg
+
+        .settings-btn
+          i.material-icons settings
+      .pocket
+        .active-toggle-wrapper
+          .active-toggle-module(data-toggle="true")
+            .module-switch
+            .module-background
+        .primary-info
+          span.name: a(href="#") LTBcoin Compatible Address
+          span.address 1JztwoasonzzoaONGSonazon3902eg
+
+        .settings-btn
+          i.material-icons settings
+      .pocket
+        .active-toggle-wrapper
+          .active-toggle-module(data-toggle="false")
+            .module-switch
+            .module-background
+        .primary-info
+          span.name: a(href="#") LTBcoin Compatible Address
+          span.address 1JztwoasonzzoaONGSonazon3902eg
+
+        .settings-btn
+          i.material-icons settings
+
+    include partials/_javascripts
