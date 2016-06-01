@@ -15,3 +15,18 @@ $('.toggle-mobile-nav').on('click', function (e) {
     $nav.addClass('active');
   }
 });
+
+$('.tooltip').on('click', function (e) {
+  var $this = $(this);
+  var $helptext = $('.helptext');
+  $helptext.stop();
+
+  var tooltip = $this.data('text');
+  if ($helptext.text() == tooltip) {
+    $helptext.hide();
+    $helptext.text('');
+  } else {
+    $helptext.show();
+    $helptext.text(tooltip);
+  }
+});
