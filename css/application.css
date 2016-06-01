@@ -418,7 +418,7 @@ body.login {
   background-color: #F7F7F7; }
   body.login .everything {
     position: relative;
-    top: 10vh;
+    top: 7vh;
     max-width: 420px;
     padding: 1.618em;
     margin: 0 auto; }
@@ -426,21 +426,42 @@ body.login {
     color: #4A4A4A;
     font-size: 42px;
     text-align: center;
-    margin-bottom: 40px; }
+    margin-bottom: 30px; }
+  body.login .tooltip {
+    color: #4A90E2;
+    float: right;
+    margin-bottom: 4px; }
+    body.login .tooltip i.material-icons {
+      font-size: 16px;
+      vertical-align: middle; }
+    body.login .tooltip:hover {
+      cursor: pointer; }
+      body.login .tooltip:hover::after {
+        text-transform: none;
+        position: absolute;
+        z-index: 100;
+        left: 0;
+        display: block;
+        content: attr(data-text);
+        background-color: rgba(74, 74, 74, 0.9);
+        color: #FAFAFA;
+        font-size: 14px;
+        padding: 20px;
+        line-height: 1.4;
+        width: 100%;
+        border-radius: 4px; }
   body.login form label {
-    background-color: #9B9B9B;
-    color: #FAFAFA;
-    border-radius: 4px;
-    position: relative;
-    top: 1px;
-    left: 15px;
-    padding: 3px 5px;
-    font-size: 10px;
-    text-transform: uppercase; }
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #9B9B9B;
+    margin-bottom: 4px; }
   body.login form input:disabled {
     background-color: #9B9B9B;
     color: #FAFAFA; }
   body.login form input, body.login form textarea {
+    display: block;
+    position: relative;
     width: 100%;
     background-color: transparent;
     border: 1px solid #C4C4C4;
