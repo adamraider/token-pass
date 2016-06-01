@@ -6,14 +6,13 @@ html(lang="en")
     .everything
       .logo token<strong>pass</strong>
       .form-wrapper
-        .helptext
         form
-          span.tooltip(data-text="Login quickly and securely by signing todays Word of the Day with a previously verified address.")
-            i.material-icons help_outline
+          .tooltip-wrapper(data-tooltip="Login quickly and securely by signing todays Word of the Day with a previously verified address.")
+            i.help-icon.material-icons help_outline
           input(name="word" type="text" value="rabbit" disabled)
           
-          span.tooltip(data-text="Paste your signed Word of the Day into this window, then click login.")
-            i.material-icons help_outline
+          .tooltip-wrapper(data-tooltip="Paste your signed Word of the Day into this window, then click login.")
+            i.help-icon.material-icons help_outline
           textarea(name="message" placeholder="cryptographic signature" rows="5")
           
           button.login-btn Login

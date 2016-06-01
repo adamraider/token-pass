@@ -431,14 +431,29 @@ body.login {
     line-height: 1.4;
     font-size: 14px;
     color: #4A4A4A; }
+  body.login [data-tooltip] {
+    position: relative; }
   body.login .tooltip {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    right: 0;
+    background-color: rgba(74, 74, 74, 0.9);
+    color: #FAFAFA;
+    font-size: 14px;
+    padding: 20px;
+    line-height: 1.4;
+    border-radius: 4px; }
+  body.login .help-icon {
+    position: relative;
+    z-index: 200;
     color: #4A90E2;
     float: right;
     margin-bottom: 4px; }
-    body.login .tooltip i.material-icons {
+    body.login .help-icon i.material-icons {
       font-size: 16px;
       vertical-align: middle; }
-    body.login .tooltip:hover {
+    body.login .help-icon:hover {
       cursor: pointer; }
   body.login form label {
     display: block;

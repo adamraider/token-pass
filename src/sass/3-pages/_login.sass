@@ -15,7 +15,22 @@ body.login
     line-height: 1.4
     font-size: 14px
     color: $gray
+  [data-tooltip]
+    position: relative
   .tooltip
+    position: absolute
+    z-index: 100
+    top: 100%
+    right: 0
+    background-color: rgba($gray, 0.9)
+    color: $white
+    font-size: 14px
+    padding: 20px
+    line-height: 1.4
+    border-radius: 4px
+  .help-icon
+    position: relative
+    z-index: 200
     color: $brand-primary
     float: right
     margin-bottom: 4px
@@ -24,20 +39,6 @@ body.login
       vertical-align: middle
     &:hover
       cursor: pointer
-      // &::after
-      //   text-transform: none
-      //   position: absolute
-      //   z-index: 100
-      //   left: 0
-      //   display: block
-      //   content: attr(data-text)
-      //   background-color: rgba($gray, 0.9)
-      //   color: $white
-      //   font-size: 14px
-      //   padding: 20px
-      //   line-height: 1.4
-      //   width: 100%
-      //   border-radius: 4px
   form
     label
       display: block

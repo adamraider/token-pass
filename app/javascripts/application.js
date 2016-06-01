@@ -16,17 +16,18 @@ $('.toggle-mobile-nav').on('click', function (e) {
   }
 });
 
-$('.tooltip').on('click', function (e) {
+$('[data-tooltip]').on('click', function (e) {
   var $this = $(this);
-  var $helptext = $('.helptext');
-  $helptext.stop();
-
-  var tooltip = $this.data('text');
-  if ($helptext.text() == tooltip) {
-    $helptext.hide();
-    $helptext.text('');
+  var uniqid = $this.data('tooltipid');
+  console.log(uniqid)
+  if (uniqid) {
+    $('#' + uniqid).remove();
+    $this.data('tooltipid', null)
   } else {
-    $helptext.show();
-    $helptext.text(tooltip);
+    var text = $this.data('tooltip');
+    uniqid = Date.now();
+    $this.data('tooltipid', uniqid);
+    var $tooltip = $.parseHTML('<div id="' + uniqid + '" class="tooltip">' + text + '</div>');
+    $this.append($tooltip);
   }
 });
