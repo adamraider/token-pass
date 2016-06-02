@@ -32,6 +32,11 @@ body.dashboard
         float: right
         line-height: 80px
         margin-left: 40px
+        display: none
+        &:hover
+          cursor: pointer
+        +tablet
+          display: block
         .avatar
           display: inline-block
           vertical-align: middle
@@ -54,7 +59,11 @@ body.dashboard
       color: $gray
       margin-right: 40px
   .search-wrapper
-    width: 350px
+    width: 100%
+    margin-top: 20px
+    +tablet
+      margin-top: 0
+      width: 350px
     height: 40px
     background-color: #fff
     border-radius: 10px
@@ -83,3 +92,64 @@ body.dashboard
     & > *
       display: inline-block
       vertical-align: middle
+
+.dash-nav-menu-btn
+  float: right
+  display: block
+  i
+    cursor: pointer
+    vertical-align: middle
+  +tablet
+    display: none
+
+$mobile-nav-width: 200px
+.dash-nav-menu-mobile
+  position: fixed
+  z-index: 2000
+  width: $mobile-nav-width
+  left: 0
+  top: 0
+  height: 100vh
+  margin: 0
+  padding: 0
+  display: block
+  overflow-y: scroll
+  color: $white
+  background-color: $gray-dark
+  box-shadow: 2px 0 5px $black
+  transition: all 0.2s ease
+  &::-webkit-scrollbar
+    display: none
+  // Default hidden and off the window
+  opacity: 0
+  left: -1 * $mobile-nav-width
+  // Active, visible and in the frame
+  &.active
+    opacity: 1
+    left: 0
+  +tablet
+    display: none
+  .landing-nav-menu-header
+    overflow: hidden
+    .title, .material-icons
+      vertical-align: middle
+    .material-icons
+      cursor: pointer
+      float: right
+      display: block
+      padding: 20px 28px 0 28px
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 0
+      padding: 0
+      a
+        text-transform: uppercase
+        letter-spacing: 1px
+        color: $white
+        padding: 20px 28px
+        display: block
+  hr
+    margin: 5px 26px
+    opacity: 0.5

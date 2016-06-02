@@ -61,11 +61,15 @@ $content-width: 680px
     +heading
   .features
     +outer-container
+    padding: 0 $gutter-px
     .feature
       float: left
       font-weight: 200
       width: 100%
       box-sizing: border-box
+      text-align: center
+      +tablet
+        text-align: left
       &:not(:last-of-type)
         padding-right: 0
         margin-bottom: 40px

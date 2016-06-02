@@ -142,12 +142,12 @@ a {
     transition: all 0.5s ease;
     padding: 0 40px;
     margin: 0 auto; }
+    @media (min-width: 768px) {
+      .landing-nav .landing-nav-container {
+        padding: 0 80px; } }
   .landing-nav.pristine {
     top: 20px;
     background-color: transparent !important; }
-    @media (min-width: 768px) {
-      .landing-nav.pristine .landing-nav-container {
-        padding: 0 80px; } }
   .landing-nav .landing-nav-menu-btn {
     float: right;
     display: block; }
@@ -365,7 +365,8 @@ a {
   .feature-area .features {
     max-width: 1200px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding: 0 40px; }
     .feature-area .features::after {
       clear: both;
       content: "";
@@ -374,7 +375,11 @@ a {
       float: left;
       font-weight: 200;
       width: 100%;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      text-align: center; }
+      @media (min-width: 768px) {
+        .feature-area .features .feature {
+          text-align: left; } }
       .feature-area .features .feature:not(:last-of-type) {
         padding-right: 0;
         margin-bottom: 40px; }
@@ -596,7 +601,13 @@ body.dashboard {
       body.dashboard .navigation .navigation-content .user {
         float: right;
         line-height: 80px;
-        margin-left: 40px; }
+        margin-left: 40px;
+        display: none; }
+        body.dashboard .navigation .navigation-content .user:hover {
+          cursor: pointer; }
+        @media (min-width: 768px) {
+          body.dashboard .navigation .navigation-content .user {
+            display: block; } }
         body.dashboard .navigation .navigation-content .user .avatar {
           display: inline-block;
           vertical-align: middle;
@@ -619,13 +630,18 @@ body.dashboard {
       color: #4A4A4A;
       margin-right: 40px; }
   body.dashboard .search-wrapper {
-    width: 350px;
+    width: 100%;
+    margin-top: 20px;
     height: 40px;
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #C4C4C4;
     overflow: hidden;
     position: relative; }
+    @media (min-width: 768px) {
+      body.dashboard .search-wrapper {
+        margin-top: 0;
+        width: 350px; } }
     body.dashboard .search-wrapper input {
       margin: 0;
       line-height: 40px;
@@ -648,6 +664,66 @@ body.dashboard {
     display: inline-block;
     vertical-align: middle; }
 
+.dash-nav-menu-btn {
+  float: right;
+  display: block; }
+  .dash-nav-menu-btn i {
+    cursor: pointer;
+    vertical-align: middle; }
+  @media (min-width: 768px) {
+    .dash-nav-menu-btn {
+      display: none; } }
+
+.dash-nav-menu-mobile {
+  position: fixed;
+  z-index: 2000;
+  width: 200px;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow-y: scroll;
+  color: #FAFAFA;
+  background-color: #272a2b;
+  box-shadow: 2px 0 5px #181818;
+  transition: all 0.2s ease;
+  opacity: 0;
+  left: -200px; }
+  .dash-nav-menu-mobile::-webkit-scrollbar {
+    display: none; }
+  .dash-nav-menu-mobile.active {
+    opacity: 1;
+    left: 0; }
+  @media (min-width: 768px) {
+    .dash-nav-menu-mobile {
+      display: none; } }
+  .dash-nav-menu-mobile .landing-nav-menu-header {
+    overflow: hidden; }
+    .dash-nav-menu-mobile .landing-nav-menu-header .title, .dash-nav-menu-mobile .landing-nav-menu-header .material-icons {
+      vertical-align: middle; }
+    .dash-nav-menu-mobile .landing-nav-menu-header .material-icons {
+      cursor: pointer;
+      float: right;
+      display: block;
+      padding: 20px 28px 0 28px; }
+  .dash-nav-menu-mobile ul {
+    margin: 0;
+    padding: 0; }
+    .dash-nav-menu-mobile ul li {
+      margin: 0;
+      padding: 0; }
+      .dash-nav-menu-mobile ul li a {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #FAFAFA;
+        padding: 20px 28px;
+        display: block; }
+  .dash-nav-menu-mobile hr {
+    margin: 5px 26px;
+    opacity: 0.5; }
+
 body.inventory section.tokens .token {
   height: 41px;
   line-height: 41px;
@@ -667,9 +743,12 @@ body.inventory section.tokens .token {
     height: 25px;
     background-color: #9B9B9B; }
   body.inventory section.tokens .token .primary-info {
-    float: left;
+    float: right;
     font-size: 18px;
     font-weight: 200; }
+    @media (min-width: 768px) {
+      body.inventory section.tokens .token .primary-info {
+        float: left; } }
     body.inventory section.tokens .token .primary-info .quantity {
       display: inline-block;
       margin-right: 10px;
@@ -678,9 +757,17 @@ body.inventory section.tokens .token {
   body.inventory section.tokens .token .secondary-info {
     float: right;
     font-size: 14px;
-    color: #9B9B9B; }
+    color: #9B9B9B;
+    display: none; }
+    @media (min-width: 768px) {
+      body.inventory section.tokens .token .secondary-info {
+        display: block; } }
     body.inventory section.tokens .token .secondary-info .expiration {
+      display: none;
       margin-right: 20px; }
+      @media (min-width: 1024px) {
+        body.inventory section.tokens .token .secondary-info .expiration {
+          display: inline-block; } }
 
 body.pockets section.pockets .pocket {
   height: 80px;
@@ -713,7 +800,11 @@ body.pockets section.pockets .pocket {
     padding-right: 20px;
     height: 100%;
     float: left;
-    position: relative; }
+    position: relative;
+    display: none; }
+    @media (min-width: 480px) {
+      body.pockets section.pockets .pocket .active-toggle-wrapper {
+        display: block; } }
   body.pockets section.pockets .pocket .active-toggle-module {
     position: relative;
     width: 60px; }
@@ -751,7 +842,11 @@ body.pockets section.pockets .pocket {
     border-radius: 4px;
     border: 1px solid #9B9B9B;
     transition: all 0.1s ease;
-    cursor: pointer; }
+    cursor: pointer;
+    display: none; }
+    @media (min-width: 768px) {
+      body.pockets section.pockets .pocket .settings-btn {
+        display: inline-block; } }
     body.pockets section.pockets .pocket .settings-btn i {
       color: #9B9B9B; }
     body.pockets section.pockets .pocket .settings-btn:hover {

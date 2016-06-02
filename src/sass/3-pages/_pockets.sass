@@ -33,6 +33,9 @@ body.pockets
         height: 100%
         float: left
         position: relative
+        display: none
+        +mobile
+          display: block
       .active-toggle-module
         position: relative
         width: 60px
@@ -74,6 +77,9 @@ body.pockets
         border: 1px solid $gray-light
         transition: all 0.1s ease
         cursor: pointer
+        display: none
+        +tablet
+          display: inline-block
         i
           color: $gray-light
         &:hover
