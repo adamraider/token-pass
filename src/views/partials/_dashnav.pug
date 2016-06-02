@@ -2,8 +2,8 @@
   .landing-nav-menu-header
     i.material-icons.toggle-mobile-nav close
   ul
-    li: a(href="register.html") Inventory
-    li: a(href="login.html") Pockets
+    li: a(href="inventory.html") Inventory
+    li: a(href="pockets.html") Pockets
     li: a(href="#") Integrations
   hr
   ul
@@ -15,9 +15,14 @@
       span token<strong>pass</strong>
     .user
       .avatar
-      i.material-icons keyboard_arrow_down
+        img(src="https://randomuser.me/api/portraits/thumb/women/60.jpg")
+      i
+        svg(style="width:24px;height:24px" viewBox="0 0 24 24")
+          path(fill="#fff" d="M17,17.25V14H10V10H17V6.75L22.25,12L17,17.25M13,2A2,2 0 0,1 15,4V8H13V4H4V20H13V16H15V20A2,2 0 0,1 13,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2H13Z")
+
     .dash-nav-menu-btn
       i.material-icons.toggle-mobile-nav dehaze
+
     ul.menu
       li: a(href="inventory.html") Inventory
       li: a(href="pockets.html") Pockets

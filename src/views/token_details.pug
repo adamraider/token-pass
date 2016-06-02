@@ -1,0 +1,88 @@
+doctype html
+html(lang="en")
+  head
+    include partials/_head
+  body.dashboard.inventory
+    include partials/_dashnav
+    section.title
+      span.heading Token Details
+      a.view-all-btn(href="inventory.html") View All Tokens      
+    section.panels-container
+      .panels.left-col
+        .panel
+          .panel-heading.
+            Primary
+          .panel-content
+            .avatar
+              .avatar-square
+                img(src="http://lorempixel.com/60/60/")
+            .primary-info
+              span.nickname: a(href="#") BITCRYSTALS
+              .subtext
+                span.quantity 1.2k
+                span.name 1 Sponsorship of the Let’s Talk Bitcoin Show
+        .panel
+          .panel-heading.
+            Info
+          .panel-content
+            .details
+              .detail
+                .detail-name.
+                  Website
+                .detail-content
+                  a(href="#") http://letstalkbitcoin.com/bitcoffee
+              .detail
+                .detail-name.
+                  Amount
+                .detail-content.
+                  100,000 in circulation
+              .detail
+                .detail-name.
+                  Sponser
+                .detail-content.
+                  Let's Talk Bicoin!
+      .panels.right-col
+        .panel
+          .panel-heading.
+            Market
+          .panel-content
+            .details
+              .detail
+                .detail-name.
+                  Official Price
+                .detail-content.
+                  1 BTC
+              .detail
+                .detail-name.
+                  Market Price
+                .detail-content.
+                  0.85 BTC
+              .detail
+                .detail-name.
+                  Vending Machines
+                .detail-content
+                  a(href="#") http://vendingmachine.com
+              .detail
+                .detail-name.
+                  Redemtion
+                .detail-content
+                  a(href="#") http://redeemmehere.com
+        .panel
+          .panel-heading.
+            Community
+          .panel-content
+            .subtitle Top Holders
+            ul.top-holders
+              li
+                .avatar: img(src="http://lorempixel.com/45/45/?t=1")
+                .username Philip J. Fry
+                .quantity 4k
+              li
+                .avatar: img(src="http://lorempixel.com/45/45/?t=2")
+                .username Bender Rodriguez
+                .quantity 3.2k
+              li
+                .avatar: img(src="http://lorempixel.com/45/45/?t=3")
+                .username Homer Simpson
+                .quantity 141
+    include partials/_javascripts
