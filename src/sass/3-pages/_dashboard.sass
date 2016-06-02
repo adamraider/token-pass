@@ -8,7 +8,9 @@ body.dashboard
     line-height: $navigation-height
     overflow: hidden
     .navigation-content
-      padding: 0 $gutter-px
+      padding: 0 15px
+      +tablet
+        padding: 0 $gutter-px
       .logo
         font-size: 24px
         letter-spacing: 1px
@@ -59,7 +61,9 @@ body.dashboard
     margin-bottom: $gutter-px 
     &:first-of-type
       margin-top: $gutter-px
-    padding: 0 $gutter-px
+    padding: 0 15px
+    +tablet
+      padding: 0 $gutter-px
     .heading
       font-size: 32px
       font-weight: 200
