@@ -578,7 +578,10 @@ body.dashboard {
     line-height: 80px;
     overflow: hidden; }
     body.dashboard .navigation .navigation-content {
-      padding: 0 40px; }
+      padding: 0 15px; }
+      @media (min-width: 768px) {
+        body.dashboard .navigation .navigation-content {
+          padding: 0 40px; } }
       body.dashboard .navigation .navigation-content .logo {
         font-size: 24px;
         letter-spacing: 1px;
@@ -629,9 +632,12 @@ body.dashboard {
   body.dashboard section {
     display: block;
     margin-bottom: 40px;
-    padding: 0 40px; }
+    padding: 0 15px; }
     body.dashboard section:first-of-type {
       margin-top: 40px; }
+    @media (min-width: 768px) {
+      body.dashboard section {
+        padding: 0 40px; } }
     body.dashboard section .heading {
       font-size: 32px;
       font-weight: 200;
